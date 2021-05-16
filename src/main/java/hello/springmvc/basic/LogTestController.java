@@ -13,8 +13,12 @@ public class LogTestController {
     public String logTest(){
         String name = "Spring";
 
-        System.out.println("name = "+name);
+//        System.out.println("name = "+name);
+        log.trace("trace log ={}", name);
+        log.debug("debug log ={}", name);
         log.info("info log ={}", name);
+        log.warn("warn log ={}", name);
+        log.error("error log ={}", name);
 
         return "ok";
     }
